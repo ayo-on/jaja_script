@@ -1,0 +1,1061 @@
+var a = '정아윤';
+console.log(a, typeof a);
+a = Number(a)
+a= String(a)
+a= Boolean(a)
+
+var age = prompt('나이를 입력하시오');
+if(age>18){console.log('어른입니다');}
+else{console.log('어른이 아닙니다')}
+
+var age = 35;
+if (age > 18) {console.log('어른입니다')
+} else if (age <0 ){
+console.log('나이를 잘못입력하셨습니다')
+else{console.log('kid')}
+
+===============
+
+필요한 변수: 
+var year = ' '
+var con = confirm(' '?)
+
+
+var year=prompt('몇년된 기아자동차인가요?')
+
+if(year>4){
+	var con = confirm('무선업데이트 하시겠습니까?)
+
+	if(con ==true){
+		console.log('결제를 진행하세요')
+	} else {
+		console.log('usb로 직접 하세요')
+	}
+}else {alert('무선 업데이트가 무료입니다')
+}
+
+-------------------------
+
+배열
+: 순서대로 값을 저장하는 객체
+: 문자열, (줄)
+: 순서대로 저장하고 순서대로 값을 꺼낼 수 있습니다.
+: 값을 꺼낼 때는 숫자로 0부터 시작해서 자동정의되는 인덱스를 호출하여 꺼내올 수 있다.
+
+var a = '아윤'
+console.log(a[2])
+
+배열을 만드는 방법
+var array1= [ ]
+console.log(typeof array1); object - 우리가 필요로 하는 방식으로 자료를 담아서 관리하는 자료형
+
+var array2 = Array()
+console.log(typeof array2);
+
+var array3 = new array( );
+console.log(typeof array3);
+
+var array1= [`a', ;b', 'c']
+console.log(array1[0]); "apple" //[0]번째 인덱스
+
+var kor= [`가', '나', '다', '라', '마']
+
+
+array1[0] = 'apri' (넣어주세요 하면 대입이 되는 것)
+console.log(array1);
+
+array[10] = '사과'
+console.log(array1[10]);  ------> [,,,,,,,,"사과"]
+console.log(array1[9]);  ------> undefined
+
+
+var obj= ['banana', 'carrot', 'egg']
+console.log(typeof obj);
+
+console.log(obj.length);  --------> 3 (3개가 들어있다)
+
+obj[3] = 'fig'
+
+obj.push('garlic') //배열의 맨마지막에 값을 추가
+obj.unshift('garlic') //배열의 맨 앞에 값을 추가
+
+                                                                  CRUD : create, read, update(수정), delete
+
+obj.pop( '공백' );  //배열의 맨 마지막의 값을 삭제(인덱스를 찾아서 동작)
+obj.shift( '공백' ) //배열의 맨 앞의 값을 삭제
+
+/*splice - 배열의 요소를 삭제하거나 추가하는 메소드
+obj.splice(기준이 되는 배열의 인덱스번호, 몇개의 요소를 제거할지, 무엇을 넣을지)
+obj.splice(2, 0, 'dessert')
+
+var obj = ['banana', 'carrot', 'dessert', 'egg', 'fig']
+
+obj[0] = 'applemango'
+console.log(obj)
+
+obj.splice(5, 1, 'eggplant')
+
+obj[1] = 'zebra'  (실수로 넣음)
+console.log(obj.sort())  ---------->순서대로 정렬해줌(가나다, abc,,,,)
+
+var korean = ['사','마','가','바', '나','다','라']
+
+console.log(korean.sort())  // 파괴적인 함수 (구조를 바꿔달라고 하지 않았는데도 바꾼다.) 
+
+
+
+
+set(집합)
+
+var array1 = [1,2,3,4,4,5,5,6,,,,] 중복되는 값을 걸러내고 싶을때
+var set1 = new set(array1) -----------------> 중복값 제거
+console.log(set1)
+console.log(korean[1][1])  -----------> korean의 2번째 단어의 2번째 글자
+
+<반복문>
+우리반 사람들이름을 하나의 리스트로 가지고 있고 class라는 배열에 (class[인덱스값] + 맛있게 드세요!)
+인덱스값 자리에 각각 배열의 사람들 이름 자리만 대입시키면 쫙 출력된다.
+
+20만명에게 보낸다면?
+어떤 조건을 만족하는 동안 반복실행되는 코드
+1. for(초기값, 조건, 증감) {조건을 만족할 경우의 실행문}
+조건이 만족되는, 참인 경우의 반복실행문
+
+var class1 = ['연지','아윤', '민호', '승철', '승호', '진원', '창민', '호찬', '다영', '진규'] 
+예약어(키워드): 이미 이 언어에서 쓰기로 약속된 이 단어가 어떤 기능을 가지고 있어서 개발자가 예를 변수명으로 쓰면 
+인터프리터가 햇갈려함
+
+이름 앞에 번호를 불혀보기
+
+var i=1 -----> 0번사라짐
+console.log(i+1, class1[i]) ------------> 1번부터 시작하게 됨
+console.log(i+1, class1[i], '님 맛있게 드세요!')
+
+소프트코딩(값을 유동적으로 만드는 것) <-> 하드코딩(값을 고정시키는 것)
+
+
+var kor= ['가위', '나비', '다람쥐', '라디오', '마파두부']         
+for (var i = 0; i < kor.length; i++) {
+console.log(kor[i][0] + kor[i][1])
+}
+
+for (var i=0, i < class.length ; i++){
+console.log(i, class1[i])
+}
+
+
+var array1=['apple','banana','cat' 'dog' 'eagle']
+for (var i=0; i < array1.length ; i++){
+console.log(i, array1[i])
+}
+//여기서 짝수만.
+//1.원본을 변경한다.
+//2. 증감식을 변경한다 (i = i+2)
+var kor= ['가위', '나비', '다람쥐', '라디오', '마파두부']         
+for (var i = 1; i < kor.length; i=i+2) 
+{console.log(kor[i])
+}
+
+//3. if문
+var kor= ['가위', '나비', '다람쥐', '라디오', '마파두부']         
+for (var i = 0; i < kor.length; i++) 
+{if(i % 2 == 0) {
+console.log(kor[i])
+} }
+
+for (var i = 0; i < kor.length; i++) 
+{if(i % 2 ==! 0) {
+console.log(kor[i])
+}
+}
+
+for (var i = 0; i < kor.length; i++) 
+{if(i % 2 == 1) {
+console.log(kor[i])
+}
+}
+
+<중첩반복문>
+
+for (var i = 0; i < 10; i++) {
+ console.log{i)
+  for (var j = 0; j < 3; j++) {
+   for (var k =0; k < 3; k ++) {
+    console.log(i, j, k) }}}
+
+for (var i = 2; i < 10; i++) {
+  for (var j = 1; j < 10; j++) {
+   for (var k = var i * var j;) {
+    console.log(i, j, k) }}}
+
+for (var i = *; i < 6; i++) {
+  for (var j = 1; j < 10; j++) {
+   for (var k = var i * var j;) {
+    console.log(i, j, k) }}}
+
+var star =''
+for (var i =0 ; i < 5 ; i++) {
+  for(var j=0; j <= i ; j++) {
+      star = star + '*';
+   }
+   star = star + '\n';
+} 
+console.log(star)
+
+
+var star =''
+for (var i = 0 ; i < 5 ; i++) {
+  for(var j = 0 ; j <= i*2 ; j++) {
+      star = star + '*';
+   }
+   star = star + '\n';
+} 
+console.log(star)
+
+(i는 세로칸, j는 가로칸)
+
+var star =''
+for (var i =4 ; i >= 0 ; i--) {
+  for(var j =0; j <= i; j++) {
+      star = star + '*';
+   }
+  for (var k=0; k > i; k++) {
+   star = star + '*'
+}
+   star = star + '\n';
+} 
+console.log(star)
+
+
+var star = ' '
+for (var i = 0; i<5 ; i++) {
+   star = star + '\n'
+   for (var j = 4;  j > i  ;  j--) {
+        star = star + ' ';
+   }
+   for (var k = 0; k <= (i*2) ; K++) {
+        star = star + '*';
+}
+
+for: 끝이 있는 반복
+
+for (var i = 0 ; i < 9 ; i++) {
+  console.log(i)
+}
+
+break: 아예 실행문 자체를 빠져나오게함
+해당 경우에만 실행문을 넘어가게 함
+continue;// 해당 경우에만 실행문을 넘어가게 함 (이번한번만 넘어가자)
+
+<0~10까지 출력하는 for문>
+for(var i =0, i<11, i++){
+if(i ==5){
+break;
+}  
+console.log(i)
+}
+
+<0~10까지 짝수만 출력하는 for문>
+for(var i =0, i<11, i++){
+if(i %2 == 1){
+continue;
+}  
+console.log(i)
+}
+
+<0~10까지 짝수를 만나면 중단되는 for문>
+for(var i =0, i<11, i++){
+if(i %2 == 0){
+break;
+}  
+console.log(i)
+}
+
+2. while
+
+for(초기값; 조건; 증감식)
+while{조건} 어떨때 끝낼지 써주지 않으면 다운되므로 안에서 해결한다.
+
+var i = 0 //초기값
+while (i < 11){ //조건
+console.log(i) //실행문
+i++ //증감식
+}
+
+
+for(var i =0, i<11, i++){
+if(i %2 == 1){
+continue;
+}  
+console.log(i)
+}
+
+ <while문으로 변경하기>
+
+var i =1;
+while{ (i<=10){
+i++
+if(i%2 ==1){
+cintinue;
+}
+console.log(i)
+}
+
+------------------------
+for(var i =0, i<11, i++){
+if(i %2 == 0){
+break;
+}  
+console.log(i)
+}
+
+<while문으로 변경>
+var i =0
+while( (i<11){
+i++
+if(i % 2 == 0){
+break;
+}  
+console.log(i)
+}
+
+<1에서 n까지 총 합을 구하는 반복문> n은 prompt로 입력
+
+// var a = prompt('값을 입력하세요')
+
+var a = 30
+console.log(a)
+
+var total = 0;
+for(var i = 1; i <= a; i++){
+   total = total + i
+    console.log(i, total)
+}
+=========================
+
+반복문 for (초기값, 조건, 증감식){
+ 조건만족시 실행문}
+
+for문은 몇번 반복할지 알때
+
+초기값 몇번 반복할지 모를때
+while:(조건) {
+조건(증감식)만족시 실행문}
+
+1. for문
+
+for (var i=1 ; i <= n ; i++){ 
+변수: i(하나씩 늘어날), n(최종조건), sum(누적하면서 반복숫자를 더할 값)
+var n, sum;
+//n= prompt('숫자를 입력하세요')
+sum = 0;
+//console.log(n)
+sum + sum + i;
+console.log(i, sum)
+}
+
+2. while문
+
+var n, i, sum;
+sum = 0;
+i = 1; 
+while ( i <= n){
+         sum = sum + i;
+         i++;
+         console.log('i의 값', i, 'sum의 값' sum)
+}
+  
+=================
+n 입력받음
+15이상인지 확인
+1~n까지 더함
+결과출력
+
+var n, i, sum;
+sum = 0;
+i = 1; 
+
+while(true){
+     if(n <= 15) {
+       n = prompt('숫자를 입력하세요')
+} else {
+while ( i <= n){
+         sum = sum + i;
+         i++; 
+        console.log(i, sum);
+      break;
+   }
+ }
+}
+
+컨티뉴: 이번만 통과
+브레이크: 아예 실행문 밖으로 나가기
+와일
+: 몇번 반복할지 모를때 내가 원하는 값을 구할때 까지 반복시킬수 있다.
+: 초기값을 따로 정해줘야함, 
+: 조건 만족시킬 방법을 실행문안에 적어줘야함(i++;, break;)
+: 자주쓰지는 않지만 서버는 계속 커져있어야되니까.. 
+
+var year = prompt('차를 구매한지 몇 년 되셨습니까?(정수로만 입력하세요)');
+if (0 < year && year <= 4) {
+        console.log('무선 업데이트를 무료로 할 수 있습니다')
+} else if ( 4< year) {
+        if (confirm('유료 무선 업데이트를 하시겠습니까?')) {
+        console.log('무선 업데이트를 하기 위해 돈을 지불하세요')
+        } else {
+        console.log('USB를 꽂아서 업데이트 하세요.')
+        }
+} else {
+    console.log('잘못된 문자를 입력하셨습니다. 다시 입력해주세요.')
+}
+
+
+
+
+var year = prompt('차를 구매한지 몇 년 되셨습니까?(정수로만 입력하세요)');
+while (1) {
+    if (0 < year && year <= 4) {
+            console.log('무선 업데이트를 무료로 할 수 있습니다')
+            break;
+    } else if ( 4< year) {
+            if (confirm('유료 무선 업데이트를 하시겠습니까?')) {
+            console.log('무선 업데이트를 하기 위해 돈을 지불하세요')
+            break;
+            } else {
+            console.log('USB를 꽂아서 업데이트 하세요.')
+            break;
+            }
+    } else {
+        var year = prompt('잘못된 문자를 입력하셨습니다. 0이상의 정수로 다시 입력해주세요.')
+    }
+}
+===============================
+var userId, userPw, adminId, adminPw;
+adminId= 'admin';
+adminPw = '1234';
+
+userId = prompt('아이디를 입력하세요')
+userPw = prompt('비밀번호를 입력하세요')
+
+while{if (adminId == userId ) {
+    if (adminPw == userPw) {
+        alert('로그인 성공')
+    } else {
+        alert('비밀번호가 틀렸습니다'){break;}
+    }
+} else {
+    alert('없는 ID입니다')
+}}
+
+-------------------
+
+var userId, userPw, adminId, adminPw;
+adminId= 'admin';
+adminPw = '1234';
+
+userId = prompt('아이디를 입력하세요')
+
+
+while (true) {
+    if (adminId == userId ) {
+        userPw = prompt('비밀번호를 입력하세요')
+        if (adminPw == userPw) {
+            alert('로그인 성공')
+            break;
+        } else {
+            userPw = prompt('비밀번호가 틀렸습니다. 다시 입력해주세요.')
+        }
+    } else {
+        alert('없는 ID입니다') 
+        break;
+    }
+}
+-----------------
+
+var people = ['창민', '진원', '승호', '민호', '호찬', '다영', '진규', '승철', '아윤', '연지']
+var i = 1
+for(var i =0; i <people.length; i++){
+console.log(i+1, people[i]+ '님, 입장하셨습니다.')}
+
+---------
+
+var class1 = ['창민', '진원', '승호', '민호', '호찬', '다영', '진규', '승철', '아윤', '연지'];
+var people = []
+
+for (var i = 0; i < class1.length ; i++) {
+    console.log(i+1, class1[i]+'님이 입장하셨습니다')
+    // people.push(class1[i]+'님이 입장하셨습니다')
+    people[i] = class1[i]+'님이 입장하셨습니다'
+}
+
+--------------------내 이름 인덱스 번호 출력
+
+var people = ['창민', '진원', '승호', '민호', '호찬', '다영', '진규', '승철',  '연지', '아윤']
+
+for (i=0; i < people.length ; i++){
+if(people[i] == '아윤')  {
+console.log(i, people[i])
+break
+}
+}
+
+<함수>
+function twice(x) {
+  console.log(2 * x)
+}
+
+twice(2)
+twice(6)
+
+,,,,,,,,,
+console.log('a', 'b', 'c')
+,,,,,,,
+function add(x, y) {
+  console.log(x+y)
+}
+
+add(1, 2)
+
+--------------
+
+function minus(x, y) {
+  console.log(x-y)
+}
+
+minus(20, 5)
+
+function multiply(x, y) {
+  console.log(x*y)
+}
+
+multiply(20, 5)
+
+function divide(x, y) {
+  console.log(x/y)
+}
+
+divide(20, 5)
+함수
+1.만들때 펑션 함수명(받을값-파라미터){실행문}
+2.호출할때 함수명(넣을값-아규먼트)
+
+>내가 입력함
+<-인터프리터가 돌려줌
+
+-----
+
+1. 인풋 x 아웃풋o 
+2. 인풋 x 아웃풋x 
+3. 인풋o 아웃풋x add(1,2) 콘솔로그(x+y)
+4. 인풋o 아웃풋o add(1,2) 리턴(x+y)
+
+------
+
+function add1(x, y) {
+  console.log(x+y)
+}
+
+add1(1, 2)
+
+----------
+
+function multiply(x, y) {
+    return x * y;
+}
+ var sum = multiply(10, 9);
+
+console.log("합 : " + sum);
+
+--------------
+// 함수에 인자로 내 이름을 입력하면 해당 이름의 
+인덱스번호를 찾아주는 함수 search()를 만들어주세요
+
+var class1 = ['창민', '진원', '승호', '민호', '호찬', '다영', '진규', '승철',  '연지', '아윤']
+
+for (i=0; i < people.length ; i++){
+if(class1[i] == '아윤')  {
+console.log(i, class1[i])
+break
+}
+}
+-------------
+var class1 = ['창민', '진원', '승호', '민호', '호찬', '다영', '진규', '승철', '아윤', '연지']
+
+
+function search(x) {
+  for ( i = 0; i < class1.length; i++)
+    if (x[i] == '아윤') {
+      console.log(i + x[i])
+    }
+}
+search(class1)
+---------
+
+
+menu라는 함수를 만들어서 이름, 음식명을 인자로 받고
+menu(김연지, 돈까스) 라고 호출하면
+
+'김연지님 오늘 저녁은 돈까스 어떠세요?' 라고 출력되는 함수를 만들어주세요
+
+
+function menu(name, food) {
+console.log(`${name}님 오늘 
+저넉은 ${food}어떠세요?`)
+}
+menu('김연지', '돈까스')
+
+--------------------
+var class1 = ['창민', '진원', '승호', '민호', '호찬', '다영', '진규', '승철', '아윤', '연지']
+
+for (var i = 0; i < class1.length ; i++){
+  console.log(`${i+1}, ${class1[i]}`)
+}
+--------------
+
+css
+인라인: 태그안 스타일="css코드"
+인터널: 헤드에 <style>css코드</style>
+익스터널: <링크 "스타일쉿"> (따로 파일 만듦)
+
+js
+인라인: 태그안에 속성="자바스크립트 코드")
+인터널:
+익스터널:<script src="파일경로">
+
+<내 이름 뜨는거>
+1. 서버에서 올수있음(내 아이디로 로그인할때)
+2.인풋창에서
+3. 프롬프트로
+
+<html>
+  <head>
+  </head>
+  <body>
+    <button id='happy' onclick="alert('클릭하셨군요!')">클릭하세요</button>
+    <button id='happy1' onclick="hello()">클릭하세요1</button>
+    <script>
+      function hello() { 
+        var x = prompt('당신의 이름은?')
+          alert(`${x}님 안녕하세요?`) 
+      };
+    </script>
+   <body>   
+</html>
+
+-----------------------------5월 4일
+
+변수는 하나의 값을 저장하기 위해서 
+함수는 동작을 저장하기 위함(이 코드 실행시킬거임!)
+
+// 1. func1 - 파라메터로 숫자 두개를 받고, 앞의 숫자를 뒤의 순자로 거듭제곱하는 함수
+// 2. func2 - 파라메터로 ㅇㅇ를 입력받고 '결과는 ㅇㅇ 입니다'를 출력하는 함수
+
+function func1(a, b){
+  return(a ** b)
+}
+
+function func2(a){
+  console.log(`결과는 ${a}입니다`)}
+
+console.log(func1(2,3))
+
+func2(func1(2,3))
+
+------------
+// 3. minus- 파라메터로 숫자 두 개를 받고, 
+앞의 숫자에서 뒤의 숫자를 빼는 함수.
+// minus라는 함수의 결과가 2에서 만든 func2를 거쳐서 
+결과는 ㅇ 입니다. 라고 출력되게 해주세요. 
+
+function minus(a, b){
+  return (a - b)
+}
+
+function minus2(a){
+  console.log(`결과는 ${a}입니다`)}
+
+console.log(minus(5,3))
+
+minus2(minus(5,3))      -------------->괄호안에 함수가 먼저 실행됨
+
+-------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='login' onclick="login()">로그인</button>
+    <script>
+    var userId, userPw, adminId, adminPw;
+        adminId= 'admin';
+        adminPw = '1234';
+        
+    function login() { 
+        userId = prompt('아이디를 입력하세요')
+        userPw = prompt('비밀번호를 입력하세요')
+
+if (adminId == userId ) {
+    if (adminPw == userPw) {
+         document.write('로그인 성공')
+    } else {
+         document.write('비밀번호가 틀렸습니다')
+    }
+} else {
+     document.write('없는 ID입니다')
+} 
+      }
+    </script>  
+    
+</body>
+</html>
+
+------------
+변수,함수: 계속 재사용
+객체: 비슷한 주제별로 묶어서 재사용(붕어뻥틀에 비유)
+
+var 정아윤 = {
+ 나이 : 34,
+ 성별 : 'F',            --------------->작은따옴표, 쉼표 들어가야함
+ 결혼여부 : 'NM'    --------------->작은따옴표, 쉼표 들어가야함
+} 
+
+console.log(정아윤.나이)     --------> 콤마와 띄어쓰기 없이 해야함
+console.log(정아윤.성별)
+console.log(정아윤.결혼여부)
+console.log(정아윤.['나이'])
+console.log(정아윤.국적)    --------> 언디파인드
+
+============= 없는애 추가하거나 수정할때
+
+정아윤['국적'] = 'Kor'
+console.log(정아윤.국적)
+정아윤.국적 = 'Can'
+console.log(정아윤.국적)
+
+--------------------------------------crud : delete
+
+delete 정아윤.국적
+console.log(정아윤.국적)
+
+console.log(정아윤)  ------------>속성 한꺼번에 나옴
+
+------------------------------
+
+var mini_cooper = {
+ name : countryman,
+ color : 'sage green',           
+ company: 'BMW'    
+} 
+console.log(mini_cooper.name)     
+console.log(mini_cooper.color)
+console.log(mini_cooper.BMW)
+
+------------
+
+car
+
+-name
+-engine
+-price
+-color
+
+객체를 묶어서 관리하는 만드는 생성자라고 부른다.(생성을 하게 만드는 무언가)
+-비슷한 객체를 여러게 만들어야 할때
+첫글자를 대문자로 쓴다.(변수일때는 상수일때만 대문자로 시작한다)
+
+생성자 함수 만들 때 : 
+function Car(name, engine, price, color) {
+        this.name = name
+        this.engine = engine
+        this.price = price
+        this.color = color
+}
+
+var 메밀차 = new Car('메밀차', 'v6', '1억원', 'blue')
+console.log(메밀차)
+
+-------------
+               
+var mini_cooper = {
+ name : 'countryman',
+ color : 'sage green',           
+ company: 'BMW' ,   
+ start : function () {
+ console.log('출발합니다')} 
+console.log(mini_cooper)
+
+mini_cooper.start()
+
+------
+
+var mini_cooper = {
+ name : 'countryman',
+ 'color is' : 'sage green',           
+ company: 'BMW',
+ start : function () {
+         console.log('출발합니다')}
+} 
+console.log(mini_cooper)
+
+----------------------위아래 차이점
+: 위는 var 콜론과 쉼표와 키 하나하나, 
+-----------------------------------------------
+아래는 펑션,대문자,(파라미터 키,키,키,키) {디스 마침표 = }
+
+function Car(name, engine, price, color) {
+        this.name = name
+        this.engine = engine
+        this.price = price
+        this.color = color
+    this.start = function () {
+         console.log('출발합니다')}
+}
+
+차 한대한대를 인스턴스 instance(사례)
+
+----------------------
+function Movie(director, actor, star, review) {
+  this.감독 = director
+  this.배우 = actor 
+  this.별점= star
+  this.리뷰 = review
+  this.소개 = function () {
+  console.log(`감독은 ${director}, 제 평점은 ${star}입니다`)
+  }
+}
+
+var 쓰리빌보드 = new Movie('마틴맥도나','프란시스맥도먼드 & 우디해럴슨','10점','꼭보세요')
+var 스포트라이트 = new Movie('감독모름', '마크러팔로 & 마이클키튼 & 레이첼맥아담스', '10점', '인생영화')
+var 케빈에대하여 = new Movie('감독모름', '틸다스윈튼&에즈라밀러', '10점', '강추')
+
+-----
+function Movie(director, actor, star, review) {
+  this.감독 = director
+  this.배우 = actor 
+  this.별점= star
+  this.리뷰 = review
+}
+var 쓰리빌보드 = new Movie('마틴맥도나','프란시스맥도먼드 & 우디해럴슨','10점','꼭보세요')
+
+console.log(쓰리빌보드)
+console.log(Object.keys(쓰리빌보드));
+console.log(Object.values(쓰리빌보드));
+
+for (movie in 쓰리빌보드) {
+  console.log("key: " + movie , "value: " + 쓰리빌보드[movie])
+}
+
+------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one" class="jjang" style="border:5px solid magenta">
+    짱구는</div>
+    <div id="two" class="jjang" style="border:5px solid yellow">
+    못말려</div>
+   
+</body>
+</html>
+
+document.getElementById('one').innerHTML = '흰둥이는'
+
+innerHTML: 이미지 등을 덧씌울수있음
+innerText: 돔트리 이용해서 제어할때 텍스트만 
+
+<script>
+        document.getElementById('one').innerText = '흰둥이는'            ------------------------------------------------------------------------------------>작은따옴표로 씌워줘야함
+        document.getElementById('two').innerHTML = '<img src="https://img.insight.co.kr/static/2017/05/15/700/b4yj6ct176339p3w00w5.jpg">'
+</script>
+
+<li><a href="http://google.com" target="'_blank">철수</a></li>
+        <li><a href="http://naver.com">훈이</a></li>
+        <li><a href="http://daum.net">맹구</a></li>
+
+----------------------
+
+<body>
+    <center>
+    <div id ="num">
+    0
+    
+    </div>
+    <p></p>
+    <div id="'btn">
+        <button onclick="increase()"> + 1 </button>
+        <button onclick="decrease()"> - 1 </button><br>
+        <button onclick="reset()"> RESET </button>
+    </div>
+    </center>
+
+    <script>
+        var num = document.querySelector('#num')
+
+        function increase() {
+            num.innerText = ++num.innerText
+        }
+
+        function decrease() {
+            if (num.innerText <= 0) {
+            num.innerText = 0
+            } else {    
+            num.innerText = --num.innerText
+            }
+        }
+
+        function reset() {
+            num.innerText = 0
+    }
+
+
+    </script>
+</body>
+
+-----------배경화면 배열
+ <div id="'btn">
+        <button onclick="increase()"> + 1 </button>
+        <button onclick="decrease()"> - 1 </button><br>
+        <button onclick="reset()"> RESET </button>
+        <button onclick="bgColor1()"> BGColor </button>
+    </div>
+    </center>
+
+    <script>
+document.body.style.backgroundColor = 'orange'
+
+var Color = ['pink', 'powderblue', 'orange', 'violet', 'yellow'] 
+    var i = 0;
+function bgColor1() {
+    document.body.style.backgroundColor = Color[i];   
+    i++;
+    if (i == Color.length) {                                     --------------->대문자 주의
+        i = 0;
+    }
+}
+</script>
+
+----------------------
+html
+뼈대(구조)
+태그 ,속성,값
+배치
+
+css
+옷(디자인)
+태그, 속성, 값
+배치
+
+js
+근육, 뇌(동작)
+제어문(반복, 조건) - 동작을 여러번 치지않고도 반복을 시키는 방법
+함수- 여러번 동작을 건드리면 반복할 수 있게
+생성자 - 여러개의 객체를 찍어낼 수 있게
+
+언어의 역할별로 파일이 잘 정리되어 있으면
+검색엔진에도 잘 걸림, 기능도 훨씬 잘 사용할 수 있음
+
+-----------------------
+이벤트 리스너
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CounterEL</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        #num {
+            display: flex;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        #btn {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .bgch {
+            background-color: indianred;
+        }
+    </style>
+</head>
+
+<body class="bgcla">
+    <div id="num">0</div>
+    <div id="btn">
+        <button id="increase">+1 증가</button>
+        <button id="decrease">-1 감소</button>
+        <button onclick="res()" class="res">Reset 초기화</button>
+        <button onclick="bgc()">BG Color</button>
+        <button onclick="bgbtn()">BG Color 2</button>
+    </div>
+
+    <script>
+        var num = document.querySelector('#num')
+        var col = ['red', 'yellow', 'green', 'blue', 'white']
+        var i = 0;
+
+        increase.addEventListener('click', function() {
+            num.innerText = ++num.innerText
+        })
+
+        decrease.addEventListener('click', function() {
+            num.innerText = --num.innerText
+        })
+
+        function dec() {
+            if (num.innerText <= 0) {
+                num.innerText = 0
+            } else {
+                num.innerText = --num.innerText
+            }
+        }
+
+        function res() {
+            num.innerText = 0
+        }
+
+        function bgc() {
+            i++;
+            if (i >= col.length) {
+                i = 0;
+            }
+            document.body.style.backgroundColor = col[i];
+        }
+
+        function bgbtn() {
+            var bgcz = document.querySelector('.bgcla')
+            bgcz.classList.toggle('bgch')
+        }
+    </script>
+</body>
+
+</html>
+
+--------------------------
+
+
+
+
+
+
+
